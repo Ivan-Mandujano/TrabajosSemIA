@@ -70,7 +70,7 @@ for indice_particion, (indices_entrenamiento, indices_prueba) in enumerate(skf.s
         return pesos, sesgo
 
     pesos_entrenados, sesgo_entrenado = entrenar_perceptron(datos_entrenamiento, etiquetas_entrenamiento, tasa_aprendizaje, max_epocas, criterio_convergencia)
-    print(f"Perceptrón entrenado exitosamente para {nombre_conjunto_datos} - Partición {indice_particion + 1}.")
+    print(f"Perceptron entrenado exitosamente para {nombre_conjunto_datos} - Particion {indice_particion + 1}.")
 
     #Perceptrón entrenado en datos de prueba
     def probar_perceptron(entradas, pesos, sesgo):
@@ -81,7 +81,7 @@ for indice_particion, (indices_entrenamiento, indices_prueba) in enumerate(skf.s
 
     #Calcular la precisión
     precision = accuracy_score(etiquetas_prueba, predicciones_prueba)
-    print(f"Precisión del perceptrón en datos de prueba para {nombre_conjunto_datos} - Partición {indice_particion + 1}: {precision * 100:.2f}%")
+    print(f"Precision del perceptron en datos de prueba para {nombre_conjunto_datos} - Particion {indice_particion + 1}: {precision * 100:.2f}%")
 
     #Particion actual + precisión promedio
     precision_promedio += precision
@@ -89,7 +89,7 @@ for indice_particion, (indices_entrenamiento, indices_prueba) in enumerate(skf.s
 #Calcular precisión promedio
 precision_promedio /= 10  # Dividir por el número de particiones (k-fold)
 
-print(f"Precisión promedio del perceptrón en {nombre_conjunto_datos}: {precision_promedio * 100:.2f}%")
+print(f"Precision promedio del perceptron en {nombre_conjunto_datos}: {precision_promedio * 100:.2f}%")
 
 def plot_decision_boundary(ax, entradas, salidas, pesos, sesgo):
     # Scatter plot de patrones
