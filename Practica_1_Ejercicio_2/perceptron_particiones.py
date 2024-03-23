@@ -19,8 +19,8 @@ def perceptron(entradas, pesos, sesgo):
     #spheres2d10.csv
     #spheres2d50.csv
     #spheres2d70.csv
-archivo_conjunto_datos = 'spheres2d70.csv'
-nombre_conjunto_datos = 'Conjunto de datos: spheres2d70'
+archivo_conjunto_datos = 'spheres2d50.csv'
+nombre_conjunto_datos = 'Conjunto de datos: spheres2d50'
 datos = pd.read_csv(archivo_conjunto_datos)
 entradas = datos.iloc[:, :-1].values
 salidas = datos.iloc[:, -1].values

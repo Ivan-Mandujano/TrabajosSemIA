@@ -21,7 +21,7 @@ for i in range(num_particiones):
     datos_prueba = datos.sample(n=tamaño_prueba)
     
     #Imprimir particion
-    print(f'Partición {i+1}: {len(datos_entrenamiento)+1} datos de entrenamiento, {len(datos_prueba)+1} datos de prueba')
+    print(f'Particion {i+1}: {len(datos_entrenamiento)+1} datos de entrenamiento, {len(datos_prueba)+1} datos de prueba')
     
     #Guardar entrenamiento y prueba en archivos separados
     datos_entrenamiento.to_csv(f'particion_entrenamiento_{i}.csv', index=False)
